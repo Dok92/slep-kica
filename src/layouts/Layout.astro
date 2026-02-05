@@ -195,6 +195,10 @@ const { title, metaDescription, ogTitle, canonical } = Astro.props;
     font-size: var(--fs-200);
     color: var(--text-body);
   }
+
+  section {
+    scroll-margin-top: var(--space-700);
+  }
   @font-face {
     font-family: 'Inter';
     font-weight: 100 900;
@@ -209,6 +213,7 @@ const { title, metaDescription, ogTitle, canonical } = Astro.props;
     :root {
       section {
         flex-direction: column;
+        scroll-margin-top: var(--space-800);
       }
 
       h1 {

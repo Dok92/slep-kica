@@ -18,7 +18,7 @@ const year = date.getFullYear();
       <div class='navigation'>
         <h3>Navigacija</h3>
         <ul>
-          <li><a href='#pocetak'>Početak</a></li>
+          <li><a href='#'>Početak</a></li>
           <li><a href='#kada-nas-pozvati'>Kada nas pozvati</a></li>
           <li><a href='#usluge'>Usluge</a></li>
           <li><a href='#pitanja'>Česta pitanja</a></li>
@@ -103,7 +103,6 @@ const year = date.getFullYear();
   .navigation li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     color: var(--text-200);
     font-size: var(--fs-300);
     gap: var(--space-400);
@@ -154,7 +153,6 @@ const year = date.getFullYear();
   .credits {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: var(--space-200);
     text-align: center;
@@ -177,6 +175,31 @@ const year = date.getFullYear();
     font-weight: 600;
     transition: color 0.2s ease;
   }
+  @media (max-width: 968px) {
+    .main {
+      flex-direction: column;
+      gap: var(--space-600);
+    }
+    .intro img {
+      width: 320px;
+      height: auto;
+    }
+
+    h3 {
+      text-align: right;
+    }
+
+    .navigation ul {
+      align-items: flex-end;
+    }
+
+    .intro p {
+      text-align: right;
+    }
+    .credits {
+      align-items: flex-end;
+    }
+  }
 
   @media (max-width: 768px) {
     footer {
@@ -192,17 +215,6 @@ const year = date.getFullYear();
       padding-left: var(--x-spacing-mobile);
       padding-right: var(--x-spacing-mobile);
       padding-bottom: var(--space-500);
-    }
-  }
-
-  @media (max-width: 968px) {
-    .main {
-      flex-direction: column;
-      gap: var(--space-600);
-    }
-    .intro img {
-      width: 320px;
-      height: auto;
     }
   }
 </style>

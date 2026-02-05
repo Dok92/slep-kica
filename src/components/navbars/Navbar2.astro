@@ -8,12 +8,12 @@
 </button>
 
 <div class='menu-overlay'>
-  <a href='#' class='nav-link'>Home</a>
-  <a href='#' class='nav-link'>About</a>
-  <a href='#' class='nav-link'>Faq</a>
-  <a href='#' class='nav-link'>Contact</a>
+  <a href='#pocetak' class='nav-link'>Početak</a>
+  <a href='#kada-nas-pozvati' class='nav-link'>Kada nas pozvati</a>
+  <a href='#usluge' class='nav-link'>Usluge</a>
+  <a href='#cesta-pitanja' class='nav-link'>Česta pitanja</a>
   <div class='credits'>
-    <p>&copy Client</p>
+    <p>&copy Šlep SLužba Kića Surčin</p>
     <p>Dizajnirao: <a href='https://webdok.rs' target='_blank'>WebDok</a></p>
   </div>
 </div>
@@ -36,10 +36,6 @@
 
   .menu-button.active {
     background: #2c2c2c;
-  }
-
-  .menu-button:hover {
-    background: #555;
   }
 
   .menu-button .chevron {
@@ -81,7 +77,7 @@
   }
 
   .nav-link:hover {
-    color: #ccc;
+    color: var(--primary);
   }
 
   .nav-link.animate {
@@ -113,23 +109,29 @@
     position: absolute;
     bottom: 40px;
     text-align: center;
-    color: #888;
     font-size: 1.2rem;
   }
 
+  .credits p {
+    color: var(--text-300);
+  }
+
   .credits a {
-    color: #aaa;
+    color: white;
     text-decoration: none;
   }
 
   .credits a:hover {
-    color: #ccc;
+    color: var(--primary);
   }
 
   @media screen and (max-width: 768px) {
     .menu-button {
       right: var(--x-spacing-mobile);
     }
+    /* .menu-button:hover {
+      background: inherit;
+    } */
   }
   @media screen and (max-width: 360px) {
     .nav-link {
@@ -155,11 +157,14 @@
 
   function closeMenu() {
     navLinks.forEach((link) => link.classList.remove('animate'));
-    menuButton.classList.remove('active');
+    // menuButton.classList.remove('active');
     chevron.style.transform = 'rotate(0deg)';
     setTimeout(() => {
       menuOverlay.classList.remove('open');
     }, 450);
+    setTimeout(() => {
+      menuButton.classList.remove('active');
+    }, 1000);
   }
 
   menuButton.addEventListener('click', () => {

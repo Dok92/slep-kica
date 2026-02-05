@@ -3,7 +3,6 @@ import '../styles/global.css';
 import Hero from '../components/main/Hero.astro';
 import Footer from '../components/main/Footer.astro';
 import Layout from '../layouts/Layout.astro';
-import AnimateOnScroll from '../animations/AnimateOnScroll.astro';
 import Faq2 from '../components/accordions/Faq2.astro';
 import Navbar2 from '../components/navbars/Navbar2.astro';
 import Services from '../components/sections/Services.astro';
@@ -62,7 +61,11 @@ const faqItems = [
 ];
 ---
 
-<Layout title='Home' metaTitle='Home' metaDescription='Home'>
+<Layout
+  title='Šlep Služba Surčin i Beograd 0-24h - Pomoć na Putu'
+  metaDescription='Brz šlep vozila u Surčinu, Beogradu, blizu aerodroma i autoputa E-75. Dolazak za 20 min. Najpovoljnije cene 0-24h. Pozovite nas odmah!'
+  ogTitle='Šlep Služba Kića Surčin 0-24'
+  canonical='https://slepsluzba-surcin.rs'>
   <Navbar2 />
   <Hero />
   <WhenToCallUs />

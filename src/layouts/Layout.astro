@@ -13,6 +13,18 @@ const { title, metaDescription, ogTitle, canonical } = Astro.props;
 <!doctype html>
 <html lang='sr'>
   <head>
+    <!-- Google tag (gtag.js)-->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-1GQQ4BKH76'></script>
+    <script>
+      // @ts-nocheck
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-1GQQ4BKH76');
+    </script>
+
     <title>{title}</title>
 
     <!-- META -->

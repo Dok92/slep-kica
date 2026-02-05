@@ -56,7 +56,7 @@
     justify-content: center;
     align-items: center;
     transform: translateY(-100%);
-    transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .menu-overlay.open {
@@ -152,7 +152,7 @@
     chevron.style.transform = 'rotate(180deg)';
     setTimeout(() => {
       navLinks.forEach((link) => link.classList.add('animate'));
-    }, 250);
+    }, 150);
   }
 
   function closeMenu() {
@@ -164,7 +164,7 @@
     }, 450);
     setTimeout(() => {
       menuButton.classList.remove('active');
-    }, 1000);
+    }, 750);
   }
 
   menuButton.addEventListener('click', () => {

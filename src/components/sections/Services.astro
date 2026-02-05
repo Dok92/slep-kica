@@ -1,0 +1,99 @@
+---
+import Image from 'astro/components/Image.astro';
+import AnimateOnScroll from '../../animations/AnimateOnScroll.astro';
+import SectionsDescriptor from './SectionsDescriptor.astro';
+import PhoneCTA from '../cta/Phone.astro';
+import services from '../../assets/services.webp';
+---
+
+<section class='services padding-horizontal padding-bottom'>
+  <div class='img-wrapper'>
+    <AnimateOnScroll animation='slide-from-left' duration={0.5}>
+      <Image src={services} alt='Šlep služba Surčin' class='services-img' loading='lazy' />
+    </AnimateOnScroll>
+  </div>
+  <AnimateOnScroll animation='up-slide' duration={0.5}>
+    <div class='left-wrapper'>
+      <SectionsDescriptor headline='Usluge' />
+      <h2>Brza i pouzdana šlep služba u Surčinu</h2>
+      <p class='description'>
+        Fokusirani smo na brz dolazak i sigurnu pomoć na putu. Zahvaljujući lokaciji tik uz autoput E-75, u većini
+        slučajeva stižemo u roku od 20-30 minuta.
+      </p>
+      <ul>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Dostupni 0-24 časa, svaki dan</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Brz dolazak u Surčinu, Beogradu i šire</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Šlep putničkih i lakih teretnih vozila</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Siguran i profesionalan utovar vozila</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Prevoz do servisa, kuće ili po dogovoru</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Jasni dogovori, povoljna cena</li>
+      </ul>
+
+      <PhoneCTA />
+    </div>
+  </AnimateOnScroll>
+</section>
+
+<style>
+  .services {
+    display: flex;
+    gap: var(--section-spacing-lg);
+  }
+  h2 {
+    font-size: var(--fs-700);
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+  }
+
+  .description {
+    font-size: var(--fs-300);
+    margin-bottom: 24px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: var(--space-600);
+    color: var(--text-body);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: var(--fs-300);
+  }
+
+  li img {
+    margin-right: 12px;
+  }
+
+  .img-wrapper {
+    width: auto;
+    height: auto;
+  }
+
+  .services-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--rounded-lg);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .services {
+      flex-direction: column;
+    }
+
+    .img-wrapper {
+      width: 100%;
+      height: auto;
+      order: 2;
+    }
+    .services-img {
+      width: 100%;
+    }
+  }
+</style>

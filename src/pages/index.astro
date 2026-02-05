@@ -1,0 +1,125 @@
+---
+import '../styles/global.css';
+import Hero from '../components/main/Hero.astro';
+import Footer from '../components/main/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import AnimateOnScroll from '../animations/AnimateOnScroll.astro';
+import Faq2 from '../components/accordions/Faq2.astro';
+import Navbar2 from '../components/navbars/Navbar2.astro';
+import Services from '../components/sections/Services.astro';
+import WhenToCallUs from '../components/sections/WhenToCallUs.astro';
+
+const faqItems = [
+  {
+    question: 'Koliko se dugo čeka na dolazak šlep službe u Beogradu i Surčinu?',
+    answer:
+      'Naša prosečna brzina dolaska na teritoriji Surčina i okoline autoputa je 20-30 minuta, dok u ostale delove Beograda stižemo u roku od 45 minuta, zavisno od gužve u saobraćaju.',
+  },
+  {
+    question: 'Koja je cena šlepanja vozila po kilometru?',
+    answer:
+      'Cena šlepanja zavisi od pređene kilometraže, tipa vozila i težine tereta. Za tačnu procenu i najpovoljniju ponudu nas pozovite odmah, jer nudimo fiksne cene bez skrivenih troškova.',
+  },
+  {
+    question: 'Da li vaša šlep služba radi non-stop (00-24h)?',
+    answer:
+      'Da, dostupni smo 24 sata dnevno, 365 dana u godini, uključujući vikende i praznike. Bez obzira na doba dana ili noći, naš tim je spreman da krene na teren.',
+  },
+  {
+    question: 'Šta raditi u slučaju kvara na autoputu E-75?',
+    answer:
+      'Prvo bezbedno zaustavite vozilo u zaustavnoj traci, upalite sva četiri migavca i obucite prsluk. Odmah nas pozovite i pošaljite lokaciju putem Vibera ili WhatsApp-a radi bržeg pronalaženja.',
+  },
+  {
+    question: 'Da li šlepate i teža vozila, poput kombija ili lakih kamiona?',
+    answer:
+      'Posedujemo profesionalnu opremu za šlep putničkih automobila, džipova, SUV vozila, kao i lakih komercijalnih vozila i kombija do određene nosivosti.',
+  },
+  {
+    question: 'Kako se vrši plaćanje usluge šlepanja?',
+    answer: 'Plaćanje možete izvršiti gotovinom na licu mesta po završetku usluge',
+  },
+  {
+    question: 'Možete li prevesti auto direktno do mog servisera?',
+    answer:
+      'Naravno. Vozilo šlepamo na bilo koju adresu koju navedete - do vašeg kućnog praga, ovlašćenog servisa ili na naš siguran parking ukoliko je potrebno.',
+  },
+  {
+    question: 'Da li nudite pomoć na putu poput paljenja na kablove ili zamene gume?',
+    answer:
+      'Pored šlepanja, pružamo i osnovnu pomoć na putu koja uključuje startovanje motora (kablovima), zamenu oštećenog točka rezervnim ili dopunu goriva.',
+  },
+  {
+    question: 'Šta se dešava sa mojim vozilom u slučaju teže havarije?',
+    answer:
+      'Naši operateri su obučeni za rad sa havarisanim vozilima. Koristimo specijalne navoze i vitla kako bismo bezbedno utovarili vozilo bez dodatnih oštećenja.',
+  },
+  {
+    question: 'Da li šlepate vozila i van Beograda, na teritoriji cele Srbije?',
+    answer:
+      'Iako nam je baza u Surčinu, vršimo transport vozila na teritoriji cele Srbije, kao i prevoz vozila iz inostranstva po unapred dogovorenim uslovima.',
+  },
+];
+---
+
+<Layout title='Home' metaTitle='Home' metaDescription='Home'>
+  <Navbar2 />
+  <Hero />
+  <WhenToCallUs />
+  <Services />
+  <Faq2 items={faqItems} />
+  <Footer />
+
+  <style>
+    section {
+      padding: 5rem 4rem;
+      background-color: #f9f9f9;
+      text-align: center;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section.one .container {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+    .side-transition-imgs {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .side-transition-imgs .left-img,
+    .side-transition-imgs .right-img {
+      width: 50%;
+      border-radius: 8px;
+    }
+
+    .side-transition-imgs img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .down-under-slide-container {
+      overflow: hidden;
+      padding-top: 2rem;
+    }
+
+    section.two h1 {
+      font-size: 5rem;
+      font-weight: 500;
+    }
+
+    section.three {
+      background: #f0f0f0;
+    }
+
+    section.three h1 {
+      margin-bottom: 2rem;
+    }
+  </style>
+</Layout>

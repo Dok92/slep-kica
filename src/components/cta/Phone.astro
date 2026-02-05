@@ -1,0 +1,37 @@
+<a href='tel:+381616534830' class='cta-phone'><img src='/img/icons/phone-old.svg' alt='' />+(381) 61 653-4830</a>
+
+<style>
+  .cta-phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 24px 48px;
+    border-radius: var(--rounded-full);
+    font-weight: 400;
+    font-size: var(--fs-300);
+    transition: all 0.2s cubic-bezier(0.26, 0.51, 0.58, 1);
+  }
+
+  .cta-phone:hover {
+    background: var(--primary);
+    color: black;
+  }
+
+  .cta-phone img {
+    margin-right: var(--space-200);
+    transition: filter 0.2s cubic-bezier(0.26, 0.51, 0.58, 1);
+  }
+
+  .cta-phone:hover img {
+    filter: invert(1);
+  }
+
+  @media (max-width: 768px) {
+    .cta-phone {
+      font-size: var(--fs-200);
+    }
+  }
+</style>

@@ -1,0 +1,208 @@
+---
+const date = new Date();
+const year = date.getFullYear();
+---
+
+<footer id='kontakt'>
+  <div class='container'>
+    <div class='main'>
+      <div class='intro'>
+        <p>
+          Šlep služba Kića Surčin pruža profesionalnu pomoć na putu i transport vozila na teritoriji Beograda, autoputa
+          E-75 i cele Srbije. Zahvaljujući strateškoj lokaciji kod Surčina, garantujemo dolazak za 20-30 minuta u većini
+          slučajeva, uz dostupnost 0-24h svakog dana u godini. Specijalizovani smo za bezbedan prevoz putničkih i lakih
+          teretnih vozila, rešavanje kvarova i havarija po jasnim, unapred dogovorenim cenama. Naš fokus su efikasnost i
+          stručan utovar, čime osiguravamo maksimalnu pouzdanost na beogradskim drumovima.
+        </p>
+      </div>
+      <div class='navigation'>
+        <h3>Navigacija</h3>
+        <ul>
+          <li><a href='#pocetak'>Početak</a></li>
+          <li><a href='#kada-nas-pozvati'>Kada nas pozvati</a></li>
+          <li><a href='#usluge'>Usluge</a></li>
+          <li><a href='#pitanja'>Česta pitanja</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='divider'></div>
+    <div class='credits'>
+      <div class='copyright'>&copy; <span>Šlep služba Kića Surčin</span> {year}</div>
+      <div class='design'>Web Sajt Dizajnirao <a href='https://webdok.rs' target='_blank'>WebDok</a></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: black;
+    color: var(--text-100);
+    padding-top: var(--y-spacing-desktop);
+    padding-left: var(--x-spacing-desktop);
+    padding-right: var(--x-spacing-desktop);
+    padding-bottom: var(--space-400);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-800);
+    flex-wrap: wrap;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .intro,
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-400);
+    flex: 1;
+  }
+
+  .intro img {
+    width: 180px;
+    height: auto;
+  }
+
+  .intro p {
+    color: var(--text-200);
+    line-height: 1.6;
+  }
+
+  .intro .note {
+    color: var(--text-300);
+    font-size: var(--fs-300);
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: var(--fs-400);
+    font-weight: 600;
+    color: var(--text-100);
+    margin-bottom: var(--space-400);
+  }
+
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-300);
+  }
+
+  .navigation li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-200);
+    font-size: var(--fs-300);
+    gap: var(--space-400);
+  }
+
+  .navigation li a {
+    color: var(--text-200);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-300);
+  }
+
+  .contact-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+  }
+
+  .contact-item p,
+  .contact-item a {
+    color: var(--primary-100);
+    font-size: var(--fs-300);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-item a:hover {
+    color: var(--secondary);
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-600);
+    margin-top: var(--space-600);
+    margin-bottom: var(--space-500);
+  }
+
+  .credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-200);
+    text-align: center;
+  }
+
+  .copyright,
+  .design {
+    color: var(--text-300);
+    font-size: var(--fs-200);
+  }
+
+  .copyright span {
+    font-weight: 600;
+    color: var(--text-200);
+  }
+
+  .design a {
+    color: var(--secondary-200);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .design a:hover {
+    color: var(--secondary-500);
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      padding-top: var(--y-spacing-tablet);
+      padding-left: var(--x-spacing-tablet);
+      padding-right: var(--x-spacing-tablet);
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      padding-top: var(--y-spacing-mobile);
+      padding-left: var(--x-spacing-mobile);
+      padding-right: var(--x-spacing-mobile);
+      padding-bottom: var(--space-500);
+    }
+  }
+
+  @media (max-width: 968px) {
+    .main {
+      flex-direction: column;
+      gap: var(--space-600);
+    }
+    .intro img {
+      width: 320px;
+      height: auto;
+    }
+  }
+</style>

@@ -1,0 +1,94 @@
+---
+import Image from 'astro/components/Image.astro';
+import AnimateOnScroll from '../../animations/AnimateOnScroll.astro';
+import SectionsDescriptor from './SectionsDescriptor.astro';
+import PhoneCTA from '../cta/Phone.astro';
+import services2 from '../../assets/services-2.webp';
+---
+
+<section class='services padding-horizontal padding-bottom'>
+  <AnimateOnScroll animation='up-slide' duration={0.5}>
+    <div class='left-wrapper'>
+      <SectionsDescriptor headline='Kada nas pozvati' />
+      <h2>Tu smo kada vam je pomoć na putu najpotrebnija</h2>
+      <p class='description'>
+        Bilo da ste stali na autoputu E-75 ili u gradskoj gužvi Beograda, naš tim reaguje odmah. Bez obzira na vrstu
+        problema, vaše vozilo je kod nas u sigurnim rukama.
+      </p>
+      <ul>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Iznenadni kvar motora ili elektronike</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Oštećenja točka ili pucanje gume na putu</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Saobraćajne nezgode i havarije bilo kog stepena</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Nestanak goriva ili sipanje pogrešnog derivata</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Problemi sa akumulatorom i startovanjem</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Izvlačenje vozila sa nepristupačnih terena</li>
+        <li><img src='/img/icons/check-fill.svg' alt='' /> Prevoz tek kupljenih ili neregistrovanih vozila</li>
+      </ul>
+      <PhoneCTA />
+    </div>
+  </AnimateOnScroll>
+  <div class='img-wrapper'>
+    <AnimateOnScroll animation='slide-from-right' duration={0.5}>
+      <Image src={services2} alt='Šlep služba Surčin pomoć na putu' class='services-img' loading='lazy' />
+    </AnimateOnScroll>
+  </div>
+</section>
+
+<style>
+  .services {
+    display: flex;
+    gap: var(--section-spacing-lg);
+  }
+
+  .img-wrapper {
+    width: auto;
+    height: auto;
+  }
+
+  .services-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--rounded-lg);
+  }
+
+  h2 {
+    font-size: var(--fs-700);
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+  }
+
+  .description {
+    font-size: var(--fs-300);
+    margin-bottom: 24px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: var(--space-600);
+    color: var(--text-body);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: var(--fs-300);
+  }
+
+  li img {
+    margin-right: 12px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .services {
+      flex-direction: column;
+    }
+    .services-img {
+      width: 100%;
+    }
+  }
+</style>

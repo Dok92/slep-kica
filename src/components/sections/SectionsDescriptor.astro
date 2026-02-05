@@ -1,0 +1,27 @@
+---
+const { headline } = Astro.props;
+---
+
+<div class='section-descriptor'>
+  <img src='/img/icons/spiral.svg' class='spiral' alt='' />
+  <p>{headline}</p>
+</div>
+
+<style>
+  .section-descriptor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: var(--space-200); */
+    margin-bottom: var(--space-400);
+  }
+
+  .section-descriptor p {
+    margin: 0;
+    font-size: var(--fs-300);
+    font-weight: 500;
+    color: var(--text-primary-700);
+    /* text-transform: uppercase; */
+    position: relative;
+  }
+</style>

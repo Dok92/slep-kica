@@ -9,5 +9,12 @@ export default defineConfig({
     enabled: false,
   },
 
-  integrations: [partytown()],
+  integrations: [
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+        exclude: ['SharedStorage', 'AttributionReporting'],
+      },
+    }),
+  ],
 });

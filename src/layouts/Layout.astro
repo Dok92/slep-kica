@@ -25,9 +25,8 @@ const { title, metaDescription, ogTitle, canonical } = Astro.props;
     <meta name='robots' content='index, follow' />
 
     <!-- Google tag (gtag.js)-->
-    <script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-1GQQ4BKH76'></script>
-    <script type='text/partytown'>
-      // @ts-nocheck
+    <script async is:inline src='https://www.googletagmanager.com/gtag/js?id=G-1GQQ4BKH76'></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -36,9 +35,8 @@ const { title, metaDescription, ogTitle, canonical } = Astro.props;
       gtag('config', 'G-1GQQ4BKH76');
     </script>
     <!-- Google tag (gtag.js) -->
-    <script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=AW-17935262775'></script>
-    <script type='text/partytown'>
-      // @ts-nocheck
+    <script async is:inline src='https://www.googletagmanager.com/gtag/js?id=AW-17935262775'></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -48,8 +46,7 @@ const { title, metaDescription, ogTitle, canonical } = Astro.props;
       gtag('config', 'AW-17935262775');
     </script>
     <!-- Google Tag Manager -->
-    <script type='text/partytown'>
-      // @ts-nocheck
+    <script async is:inline>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });

@@ -9,7 +9,7 @@ import services from '../../assets/services.webp';
 <section class='services padding-horizontal padding-bottom' id='usluge'>
   <div class='img-wrapper'>
     <AnimateOnScroll animation='slide-from-left' duration={0.5}>
-      <Image src={services} alt='Šlep služba Surčin' class='services-img' loading='lazy' />
+      <Image src={services} alt='Šlep služba Surčin' class='services-img' loading='lazy' fetchpriority='low' />
     </AnimateOnScroll>
   </div>
   <AnimateOnScroll animation='up-slide' duration={0.5}>

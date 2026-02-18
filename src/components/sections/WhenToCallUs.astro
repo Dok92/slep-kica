@@ -29,7 +29,13 @@ import services2 from '../../assets/services-2.webp';
   </AnimateOnScroll>
   <div class='img-wrapper'>
     <AnimateOnScroll animation='slide-from-right' duration={0.5}>
-      <Image src={services2} alt='Šlep služba Surčin pomoć na putu' class='services-img' loading='lazy' />
+      <Image
+        src={services2}
+        alt='Šlep služba Surčin pomoć na putu'
+        class='services-img'
+        loading='lazy'
+        fetchpriority='low'
+      />
     </AnimateOnScroll>
   </div>
 </section>

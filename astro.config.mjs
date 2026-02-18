@@ -12,7 +12,7 @@ export default defineConfig({
   integrations: [
     partytown({
       config: {
-        forward: ['dataLayer.push'],
+        forward: ['dataLayer.push', 'gtag'],
       },
     }),
   ],

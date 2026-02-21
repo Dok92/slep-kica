@@ -15,10 +15,10 @@ import services from '../../assets/services.webp';
   <AnimateOnScroll animation='up-slide' duration={0.5}>
     <div class='left-wrapper'>
       <SectionsDescriptor headline='Usluge' />
-      <h2>Brza i pouzdana šlep služba u Surčinu</h2>
+      <h2>Brza i pouzdana šlep služba u Surčin</h2>
       <p class='description'>
-        Fokusirani smo na brz dolazak i sigurnu pomoć na putu. Zahvaljujući lokaciji tik uz autoput E-75, u većini
-        slučajeva stižemo u roku od 20-30 minuta.
+        Fokusirani smo na brz dolazak i siguran šlep. Zahvaljujući lokaciji tik uz autoput E-75, u većini slučajeva
+        stižemo u roku od 20-30 minuta.
       </p>
       <ul>
         <li><img src='/img/icons/check-fill.svg' alt='' /> Dostupni 0-24 časa, svaki dan</li>
@@ -71,7 +71,7 @@ import services from '../../assets/services.webp';
   }
 
   .img-wrapper {
-    width: auto;
+    width: 60%;
     height: auto;
   }
 
@@ -80,6 +80,13 @@ import services from '../../assets/services.webp';
     height: auto;
     object-fit: cover;
     border-radius: var(--rounded-lg);
+  }
+
+  @media screen and (min-width: 1921px) {
+    .img-wrapper {
+      width: auto;
+      height: auto;
+    }
   }
 
   @media screen and (max-width: 1024px) {
